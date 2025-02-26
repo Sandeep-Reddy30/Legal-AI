@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Legal AI</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Legal AI - Upload Images</h1>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" id="imageInput" name="images" multiple>
+            <button type="submit">Upload</button>
+        </form>
+        <div id="responseSection" style="display:none;">
+            <textarea id="context" readonly></textarea>
+            <input type="text" id="question" placeholder="Ask a question..." />
+            <button onclick="askQuestion()">Ask</button>
+            <div id="answer"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='legal_ai.js') }}"></script>
+</body>
+</html>
