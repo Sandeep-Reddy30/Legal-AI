@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>{% block title %}Legal AI App{% endblock %}</title>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div id="bg3d"></div>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <i class="fas fa-robot"></i>
+            <span>Legal AI</span>
+        </div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}" class="nav-link"><i class="fas fa-home"></i> Home</a>
+            <a href="{{ url_for('legal_ai') }}" class="nav-link"><i class="fas fa-file-contract"></i> Legal AI</a>
+            <a href="{{ url_for('chatbot') }}" class="nav-link"><i class="fas fa-comments"></i> Chat</a>
+        </div>
+    </nav>
+    <div class="main-content">
+        {% block content %}{% endblock %}
+    </div>
+    <script src="{{ url_for('static', filename='three.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='background3d.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html> 

@@ -1,25 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>Legal AI</title>
-</head>
-<body>
-    <div class="container">
-        <h1>Legal AI - Upload Images</h1>
+{% extends 'base.html' %}
+{% block title %}Legal AI{% endblock %}
+{% block content %}
+    <h1>Legal AI - Upload Images</h1>
+    <div class="legal-ai-container">
         <form id="uploadForm" enctype="multipart/form-data">
             <input type="file" id="imageInput" name="images" multiple>
             <button type="submit">Upload</button>
         </form>
         <div id="responseSection" style="display:none;">
             <textarea id="context" readonly></textarea>
-            <input type="text" id="question" placeholder="Ask a question..." />
-            <button onclick="askQuestion()">Ask</button>
+            <div class="question-input-row">
+                <input type="text" id="question" placeholder="Ask a question..." />
+                <button onclick="askQuestion()" class="action-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+                <button onclick="startVoiceInput()" class="action-btn voice-btn" id="voiceBtn">
+                    <i class="fas fa-microphone"></i>
+                </button>
+            </div>
             <div id="answer"></div>
         </div>
     </div>
+{% endblock %}
+{% block scripts %}
     <script src="{{ url_for('static', filename='legal_ai.js') }}"></script>
-</body>
-</html>
+{% endblock %}
