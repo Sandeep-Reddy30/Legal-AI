@@ -1,3 +1,4 @@
+# This project belongs to SANDEEP REDDY K
 from flask import Flask, render_template, request, jsonify, session
 import pytesseract
 from PIL import Image
@@ -58,6 +59,7 @@ def store_legal_ai_interaction(question, response, is_legal_question, user_id='a
             cursor.close()
         if 'conn' in locals():
             conn.close()
+# This project belongs to SANDEEP REDDY K
 
 # Tesseract OCR configuration (update this path if necessary)
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
@@ -241,3 +243,4 @@ def ask_question():
 
 if __name__ == '__main__':
     app.run(debug=True)
+# This project belongs to SANDEEP REDDY K

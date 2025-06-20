@@ -1,5 +1,7 @@
 # Legal AI Web Application
 
+**Author: SANDEEP REDDY K**
+
 This project is a web-based Legal AI assistant designed especially for lawyers and legal professionals. It leverages OCR and advanced LLMs to **summarize and answer legal questions based on uploaded images of legal documents**. The system uses Flask for the backend, Tesseract for OCR, and integrates with **Ollama Llama-3** and **Retrieval-Augmented Generation (RAG)** for highly relevant, context-aware legal responses.
 
 ## Features
@@ -101,4 +103,6 @@ Visit [http://127.0.0.1:5000/](http://127.0.0.1:5000/) in your browser.
 - The AI model is set to use `llama3` via Ollama; you may need to adjust this for your environment.
 
 ## License
-MIT License (add your license here) 
+MIT License
+
+This project belongs to **SANDEEP REDDY K**. 
